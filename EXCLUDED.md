@@ -6,12 +6,17 @@ Te pliki i katalogi byly obecne na komputerze, ale nie zostaly skopiowane do rep
 - `~/.docker/config.json`, `~/.docker/.token_seed`, `~/.docker/contexts/`
 - `~/.config/gh/hosts.yml`
 - `~/.codex/auth.json`, `~/.codex/history.jsonl`, `~/.codex/*.sqlite*`, `~/.codex/sessions/`
+- `~/.codex/config.toml`
 - `~/.claude.json`, `~/.claude/`
 - `~/.gemini/`
 - `~/.continue/`
 - `~/.cursor/extensions/`, `~/Library/Application Support/Cursor/User/globalStorage/`, `workspaceStorage/`, `History/`
+- `~/Library/Application Support/Cursor/`
 - `~/Library/Application Support/Code/User/globalStorage/`, `workspaceStorage/`, `History/`, `mcp.json`
 - `~/.config/zed/prompts/`
+- `~/.hammerspoon/`
+- `~/.gitconfig`
+- `~/.docker/`
 - shell histories: `.zsh_history`, `.bash_history`, `.python_history`
 
 Jezeli naprawde potrzebujesz ktoregos z tych elementow, przenies go osobnym, prywatnym i szyfrowanym kanalem. Nie mieszaj go z repo dotfiles.

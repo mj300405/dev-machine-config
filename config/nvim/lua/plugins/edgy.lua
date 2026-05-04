@@ -2,7 +2,7 @@ return {
   "folke/edgy.nvim",
   opts = {
     left = {
-      -- Claude/Codex terminal side panels
+      -- Side terminal panels
       {
         ft = "snacks_terminal",
         title = "%{b:snacks_terminal.id}: %{b:term_title}",

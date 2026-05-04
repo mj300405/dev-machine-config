@@ -1,7 +1,6 @@
-[ -f ~/.fzf.bash ] && source ~/.fzf.bash
+[ -f "$HOME/.fzf.bash" ] && source "$HOME/.fzf.bash"
 
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/michal/.lmstudio/bin"
-# End of LM Studio CLI section
+# LM Studio CLI
+export PATH="$PATH:$HOME/.lmstudio/bin"
 
-. "$HOME/.cargo/env"
+[ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"

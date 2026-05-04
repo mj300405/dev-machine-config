@@ -19,14 +19,3 @@ vim.keymap.set("n", "<leader>tt", function()
     },
   })
 end, { desc = "Terminal (Bottom)" })
-
-vim.keymap.set("n", "<leader>cx", function()
-  Snacks.terminal({ "codex" }, {
-    cwd = project_root(),
-    auto_close = false,
-    win = {
-      position = "left",
-      width = 0.3,
-    },
-  })
-end, { desc = "Codex Side Panel" })

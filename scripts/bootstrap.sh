@@ -23,14 +23,6 @@ if command -v code >/dev/null 2>&1 && [ -f "$ROOT/vscode-extensions.txt" ]; then
   done < "$ROOT/vscode-extensions.txt"
 fi
 
-if command -v cursor >/dev/null 2>&1 && [ -f "$ROOT/cursor-extensions.txt" ]; then
-  echo "Installing Cursor extensions..."
-  while IFS= read -r extension; do
-    [ -z "$extension" ] && continue
-    cursor --install-extension "$extension" --force
-  done < "$ROOT/cursor-extensions.txt"
-fi
-
 if command -v npm >/dev/null 2>&1 && command -v jq >/dev/null 2>&1 && [ -f "$ROOT/npm-global.json" ]; then
   echo "Installing global npm packages..."
   jq -r '.dependencies // {} | keys[]' "$ROOT/npm-global.json" | while IFS= read -r package; do

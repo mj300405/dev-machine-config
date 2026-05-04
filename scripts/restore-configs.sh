@@ -45,14 +45,9 @@ copy_dir "$ROOT/config/zed" "$HOME/.config/zed"
 
 copy_file "$ROOT/app-support/Code/User/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
 copy_file "$ROOT/app-support/Code/User/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
-copy_file "$ROOT/app-support/Cursor/User/settings.json" "$HOME/Library/Application Support/Cursor/User/settings.json"
-copy_file "$ROOT/app-support/Cursor/User/keybindings.json" "$HOME/Library/Application Support/Cursor/User/keybindings.json"
 copy_file "$ROOT/app-support/Ghostty/config" "$HOME/Library/Application Support/com.mitchellh.ghostty/config"
 
-copy_dir "$ROOT/hammerspoon" "$HOME/.hammerspoon"
-copy_file "$ROOT/docker/daemon.json" "$HOME/.docker/daemon.json"
 copy_file "$ROOT/ssh/config" "$HOME/.ssh/config"
-copy_file "$ROOT/ai/codex/config.toml" "$HOME/.codex/config.toml"
 
 echo "Config restore done."
 echo "Backups, if any, are in: $BACKUP"

@@ -1,8 +1,6 @@
+[ -f "$HOME/.local/bin/env" ] && . "$HOME/.local/bin/env"
 
-. "$HOME/.local/bin/env"
+# LM Studio CLI
+export PATH="$PATH:$HOME/.lmstudio/bin"
 
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/michal/.lmstudio/bin"
-# End of LM Studio CLI section
-
-. "$HOME/.cargo/env"
+[ -f "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
