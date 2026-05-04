@@ -12,7 +12,7 @@ Te pliki i katalogi byly obecne na komputerze, ale nie zostaly skopiowane do rep
 - `~/.continue/`
 - `~/.cursor/extensions/`, `~/Library/Application Support/Cursor/User/globalStorage/`, `workspaceStorage/`, `History/`
 - `~/Library/Application Support/Cursor/`
-- `~/Library/Application Support/Code/User/globalStorage/`, `workspaceStorage/`, `History/`, `mcp.json`
+- `~/Library/Application Support/Code/User/globalStorage/`, `workspaceStorage/`, `History/`, `sync/`
 - `~/.config/zed/prompts/`
 - `~/.hammerspoon/`
 - `~/.gitconfig`

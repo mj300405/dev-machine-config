@@ -45,6 +45,7 @@ copy_dir "$ROOT/config/zed" "$HOME/.config/zed"
 
 copy_file "$ROOT/app-support/Code/User/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
 copy_file "$ROOT/app-support/Code/User/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
+copy_file "$ROOT/app-support/Code/User/mcp.json" "$HOME/Library/Application Support/Code/User/mcp.json"
 copy_file "$ROOT/app-support/Ghostty/config" "$HOME/Library/Application Support/com.mitchellh.ghostty/config"
 
 copy_file "$ROOT/ssh/config" "$HOME/.ssh/config"

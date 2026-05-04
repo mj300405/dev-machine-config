@@ -7,13 +7,13 @@ Nie ma tu prywatnego globalnego usera Gita, Cursor, Hammerspoon, Codex configu, 
 ## Zawartosc
 
 - `Brewfile` - minimalny Homebrew bundle: shell/CLI, VS Code, Ghostty, Neovim, Python tooling, Ollama/opencode, OrbStack.
-- `vscode-extensions.txt` - okrojony zestaw rozszerzen VS Code pod Python/AI/notebooki i podstawowe formatowanie.
+- `vscode-extensions.txt` - prawie pelny zestaw rozszerzen VS Code, wyczyszczony z oczywistych pozostalosci starego mobile/Windows setupu.
 - `npm-global.json` i `npm-global.txt` - globalne paczki npm, zostawione jako inventory.
 - `pyenv-versions.txt` - tylko Python `3.14.4`.
 - `rust-toolchains.txt` - Rust inventory, bez automatycznej instalacji w skrypcie.
 - `dotfiles/` - shell, tmux, Powerlevel10k, fzf; bez `.gitconfig`.
 - `config/` - Neovim, Starship, Fish, Git ignore, Zed.
-- `app-support/` - ustawienia VS Code i Ghostty.
+- `app-support/` - ustawienia VS Code, VS Code MCP i Ghostty.
 - `ssh/config` - tylko neutralny SSH config, bez kluczy.
 
 ## Szybkie uzycie na nowym Macu

@@ -3,13 +3,19 @@
   "workbench.iconTheme": "material-icon-theme",
   "workbench.startupEditor": "none",
   "workbench.sideBar.location": "right",
+  "workbench.editorAssociations": {
+    "*.pdf": "default"
+  },
   "explorer.confirmDelete": false,
   "explorer.confirmDragAndDrop": false,
   "extensions.ignoreRecommendations": true,
+  "security.workspace.trust.untrustedFiles": "open",
   "git.autofetch": true,
   "git.confirmSync": false,
   "git.openRepositoryInParentFolders": "always",
-  "security.workspace.trust.untrustedFiles": "open",
+  "githubPullRequests.pullBranch": "never",
+  "update.showReleaseNotes": false,
+  "redhat.telemetry.enabled": true,
   "editor.inlineSuggest.enabled": true,
   "editor.unicodeHighlight.ambiguousCharacters": false,
   "terminal.integrated.enableMultiLinePasteWarning": "never",
@@ -20,6 +26,11 @@
   "github.copilot.editor.enableAutoCompletions": true,
   "github.copilot.nextEditSuggestions.enabled": true,
   "github.copilot.chat.setupTests.enabled": false,
+  "remote.defaultExtensionsIfInstalledLocally": [
+    "GitHub.copilot",
+    "GitHub.copilot-chat",
+    "GitHub.vscode-pull-request-github"
+  ],
   "[python]": {
     "editor.formatOnType": true
   },
@@ -41,5 +52,15 @@
   "[github-actions-workflow]": {
     "editor.defaultFormatter": "redhat.vscode-yaml"
   },
-  "jupyter.askForKernelRestart": false
+  "docker.extension.enableComposeLanguageServer": false,
+  "hediet.vscode-drawio.resizeImages": null,
+  "jupyter.askForKernelRestart": false,
+  "roo-cline.allowedCommands": [
+    "npm test",
+    "npm install",
+    "tsc",
+    "git log",
+    "git diff",
+    "git show"
+  ]
 }
