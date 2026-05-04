@@ -1,0 +1,15 @@
+.DS_Store
+
+# Never commit credentials or local runtime state.
+**/auth.json
+**/hosts.yml
+**/*token*
+**/*credential*
+**/*secret*
+**/*.sqlite
+**/*.sqlite-*
+**/*.db
+**/*.log
+
+# Local script output/backups.
+.restore-backups/

@@ -1,0 +1,48 @@
+model = "gpt-5.5"
+model_reasoning_effort = "high"
+[projects."/Users/michal/Desktop/lullify"]
+trust_level = "trusted"
+
+[projects."/Users/michal/Desktop/dzoby"]
+trust_level = "trusted"
+
+[projects."/Users/michal/Desktop/optiflow-ai"]
+trust_level = "trusted"
+
+[projects."/Users/michal/Desktop/masters_thesis"]
+trust_level = "trusted"
+
+[projects."/Users/michal/Desktop/wtto_perl"]
+trust_level = "trusted"
+
+[projects."/Users/michal/Desktop/workate"]
+trust_level = "trusted"
+
+[projects."/Users/michal/Desktop"]
+trust_level = "trusted"
+
+[projects."/Users/michal/Desktop/eth-hackathon"]
+trust_level = "trusted"
+
+[projects."/Users/michal"]
+trust_level = "trusted"
+
+[notice]
+hide_rate_limit_model_nudge = true
+
+[notice.model_migrations]
+"gpt-5.3-codex" = "gpt-5.4"
+
+[mcp_servers.figma]
+url = "https://mcp.figma.com/mcp"
+
+[profiles.ollama-launch]
+openai_base_url = "http://127.0.0.1:11434/v1/"
+forced_login_method = "api"
+model_provider = "ollama-launch"
+[model_providers.ollama-launch]
+name = "Ollama"
+base_url = "http://127.0.0.1:11434/v1/"
+
+[tui.model_availability_nux]
+"gpt-5.5" = 4

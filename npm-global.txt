@@ -1,0 +1,5 @@
+/opt/homebrew/lib
+├── @anthropic-ai/claude-code@2.0.1
+├── npm@11.6.2
+└── yarn@1.22.22
+
