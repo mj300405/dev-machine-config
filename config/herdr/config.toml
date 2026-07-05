@@ -1,0 +1,33 @@
+onboarding = false
+
+[ui]
+show_agent_labels_on_pane_borders = true
+
+[theme]
+name = "catppuccin"
+auto_switch = false
+
+[keys]
+# --- workspace nav (było puste) ---
+previous_workspace = "prefix+["      # Ctrl+b [  poprzedni workspace
+next_workspace     = "prefix+]"      # Ctrl+b ]  następny workspace
+switch_workspace   = "prefix+shift+1..9"  # Ctrl+b Shift+1..9  skok do workspace N
+switch_tab         = ""                    # wyłączone: zakładki masz na Ctrl+1..9 (bez prefixu)
+
+# --- agent nav (było puste) ---
+previous_agent = "prefix+,"          # Ctrl+b ,  poprzedni agent (globalnie)
+next_agent     = "prefix+."          # Ctrl+b .  następny agent (globalnie)
+
+# --- panele / worktree (było puste) ---
+last_pane     = "prefix+;"           # Ctrl+b ;  skok do ostatniego panelu
+open_worktree = "prefix+shift+o"     # Ctrl+b Shift+O  otwórz worktree
+
+focus_agent = "prefix+1..9"          # Ctrl+b 1..9  skok do agenta N
+
+# remove_worktree — celowo NIE bindowane (operacja usuwająca; rób z menu worktree)
+
+[keys.indexed]
+# Bezpośrednie skoki BEZ prefixu — najbliżej "applowego" Cmd+cyfra.
+# Działają, jeśli terminal przepuszcza Ctrl+cyfra do herdra (iTerm2/Ghostty/WezTerm: tak).
+tabs       = "ctrl"                   # Ctrl+1..9        skok do zakładki N
+workspaces = "ctrl+shift"            # Ctrl+Shift+1..9  skok do workspace N

@@ -42,6 +42,7 @@ copy_dir "$ROOT/config/nvim" "$HOME/.config/nvim"
 copy_dir "$ROOT/config/fish" "$HOME/.config/fish"
 copy_dir "$ROOT/config/git" "$HOME/.config/git"
 copy_dir "$ROOT/config/zed" "$HOME/.config/zed"
+copy_file "$ROOT/config/herdr/config.toml" "$HOME/.config/herdr/config.toml"
 
 copy_file "$ROOT/app-support/Code/User/settings.json" "$HOME/Library/Application Support/Code/User/settings.json"
 copy_file "$ROOT/app-support/Code/User/keybindings.json" "$HOME/Library/Application Support/Code/User/keybindings.json"
