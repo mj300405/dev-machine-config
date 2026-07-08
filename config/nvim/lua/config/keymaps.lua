@@ -1,0 +1,12 @@
+-- Keymaps are automatically loaded on the VeryLazy event
+-- Default keymaps that are always set: https://github.com/LazyVim/LazyVim/blob/main/lua/lazyvim/config/keymaps.lua
+-- Add any additional keymaps here
+
+local map = vim.keymap.set
+
+map("n", "<leader>gg", function()
+  Snacks.lazygit()
+end, { desc = "Lazygit" })
+
+map("n", "<leader>e", "<cmd>Neotree toggle<cr>", { desc = "Toggle Explorer" })
+map("n", "<leader>E", "<cmd>Neotree reveal<cr>", { desc = "Reveal Current File" })

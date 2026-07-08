@@ -1,146 +1,121 @@
-# Starship configuration with single line and right-facing arrow tip
+# Powerline-style prompt tuned for a LazyVim/Ghostty workflow.
+# Requires a Nerd Font in the terminal.
 
-# Define a single-line format
-format = "$username$directory$git_branch$git_status$package$golang$terraform$docker_context$python$nodejs$character"
+format = """
+[](fg:#89b4fa)\
+$os\
+$username\
+[](bg:#313244 fg:#89b4fa)\
+$directory\
+[](fg:#313244 bg:#45475a)\
+$git_branch\
+$git_status\
+[](fg:#45475a bg:#585b70)\
+$nodejs\
+$python\
+$docker_context\
+$package\
+[](fg:#585b70)\
+$fill\
+$cmd_duration\
+$line_break\
+$character"""
 
-# No extra newline
-add_newline = false
+add_newline = true
+palette = "catppuccin_mocha"
 
-[localip]
-ssh_only = false
-format = '[$localipv4](bold red) '
+[palettes.catppuccin_mocha]
+blue = "#89b4fa"
+lavender = "#b4befe"
+sapphire = "#74c7ec"
+green = "#a6e3a1"
+yellow = "#f9e2af"
+peach = "#fab387"
+red = "#f38ba8"
+mauve = "#cba6f7"
+surface0 = "#313244"
+surface1 = "#45475a"
+surface2 = "#585b70"
+text = "#cdd6f4"
+
+[fill]
+symbol = " "
+
+[os]
 disabled = false
+style = "bg:blue fg:#11111b"
+format = "[ $symbol ]($style)"
+
+[os.symbols]
+Macos = ""
 
 [username]
-style_user = "green bold"
-style_root = "red bold"
-format = "[$user]($style) "
-disabled = false
 show_always = true
+style_user = "bg:blue fg:#11111b bold"
+style_root = "bg:red fg:#11111b bold"
+format = "[$user ]($style)"
 
-[hostname]
-disabled = true  # Hostname is disabled
-
-# Right-facing arrow tip
-[character]
-success_symbol = "[❯](bold green)"
-error_symbol = "[❯](bold red)"
-  
-# configure directory
 [directory]
-read_only = " "
-truncation_length = 10
-truncate_to_repo = true # truncates directory to root folder if in github repo
-style = "bold italic blue"
+style = "bg:surface0 fg:text bold"
+format = "[  $path ]($style)"
+truncation_length = 3
+truncate_to_repo = true
+read_only = " 󰌾"
 
-[cmd_duration]
-min_time = 4
-show_milliseconds = false
-disabled = false
-style = "bold italic red"
-
-[aws]
-symbol = "  "
-
-[conda]
-symbol = " "
-
-[dart]
-symbol = " "
-
-[docker_context]
-symbol = " "
-format = "via [$symbol$context]($style) "
-style = "blue bold"
-only_with_files = true
-detect_files = ["docker-compose.yml", "docker-compose.yaml", "Dockerfile"]
-detect_folders = []
-disabled = false
-
-[elixir]
-symbol = " "
-
-[elm]
-symbol = " "
-
-# Git branch with branch icon and "on" prefix
 [git_branch]
-symbol = " "
-format = "on [${symbol}${branch}](bold purple) "
-truncation_length = 20
-truncation_symbol = "..."
+symbol = ""
+style = "bg:surface1 fg:mauve bold"
+format = "[ $symbol $branch ]($style)"
+truncation_length = 24
+truncation_symbol = "…"
 
-# Git status with format like "[$!+?]"
 [git_status]
-format = '[\[$all_status$ahead_behind\]](bold red) '
-conflicted = "✖"
-ahead = "↑${count}"
-behind = "↓${count}"
-diverged = "↕↑${ahead_count}↓${behind_count}"
-up_to_date = ""
-untracked = "…"
-stashed = "●"
-modified = "✚"
-staged = "●"
-renamed = "»"
-deleted = "✖"
+style = "bg:surface1 fg:peach bold"
+format = "[$all_status$ahead_behind ]($style)"
+conflicted = " "
+ahead = "⇡${count} "
+behind = "⇣${count} "
+diverged = "⇕⇡${ahead_count}⇣${behind_count} "
+untracked = "?${count} "
+stashed = "󰏗 "
+modified = "!${count} "
+staged = "+${count} "
+renamed = "»${count} "
+deleted = "✘${count} "
 
-[golang]
-symbol = " "
-
-[hg_branch]
-symbol = " "
-
-[java]
-symbol = " "
-
-[julia]
-symbol = " "
-
-[memory_usage]
-symbol = "󰍛 "
-
-[nim]
-symbol = " "
-
-[nix_shell]
-symbol = " "
-
-[package]
-symbol = "󰏗 "
-
-[perl]
-symbol = " "
-
-[php]
-symbol = " "
+[nodejs]
+symbol = ""
+style = "bg:surface2 fg:green bold"
+format = "[ $symbol $version ]($style)"
+detect_files = ["package.json", ".node-version", ".nvmrc"]
+detect_folders = ["node_modules"]
 
 [python]
-symbol = " "
-#pyenv_version_name = true
-format = 'via [${symbol}python (${version} )(\($virtualenv\) )]($style)'
-style = "bold yellow"
-pyenv_prefix = "venv "
-python_binary = ["./venv/bin/python", "python", "python3", "python2"]
+symbol = ""
+style = "bg:surface2 fg:yellow bold"
+format = "[ $symbol $version${virtualenv} ]($style)"
+python_binary = ["./venv/bin/python", ".venv/bin/python", "python3", "python"]
 detect_extensions = ["py"]
 version_format = "v${raw}"
 
-[ruby]
-symbol = " "
+[docker_context]
+symbol = ""
+style = "bg:surface2 fg:sapphire bold"
+format = "[ $symbol $context ]($style)"
+only_with_files = true
+detect_files = ["docker-compose.yml", "docker-compose.yaml", "Dockerfile"]
 
-[rust]
-symbol = " "
+[package]
+symbol = "󰏗"
+style = "bg:surface2 fg:lavender bold"
+format = "[ $symbol $version ]($style)"
 
-[scala]
-symbol = " "
+[cmd_duration]
+min_time = 1000
+style = "fg:yellow bold"
+format = "[󰔛 $duration]($style) "
 
-[shlvl]
-symbol = " "
-
-[swift]
-symbol = "ﯣ "
-
-[nodejs]
-format = "via [ Node.js $version](bold green) "
-detect_files = ["package.json", ".node-version"]
-detect_folders = ["node_modules"]   
+[character]
+success_symbol = "[❯](bold green)"
+error_symbol = "[❯](bold red)"
+vimcmd_symbol = "[❮](bold mauve)"

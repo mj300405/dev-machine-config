@@ -9,8 +9,8 @@ keybind = global:§=toggle_quick_terminal
 quick-terminal-size = 40%
 quick-terminal-position = bottom
 
-# Font - JetBrains Mono
-font-family = JetBrains Mono
+# Font - Nerd Font required for Starship/LazyVim icons and Powerline arrows.
+font-family = JetBrainsMono Nerd Font
 font-size = 14
 
 # Theme - Github dark (built-in)
